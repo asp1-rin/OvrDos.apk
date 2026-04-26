@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 int get_pid(const char* process_name);
 uintptr_t get_module_base(int pid, const char* module_name);
