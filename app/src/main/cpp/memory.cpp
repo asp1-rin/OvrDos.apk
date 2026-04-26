@@ -1,3 +1,4 @@
+#include "memory.h"
 #include <jni.h>
 #include <string>
 #include <unistd.h>
