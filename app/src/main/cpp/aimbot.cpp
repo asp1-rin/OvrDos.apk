@@ -18,7 +18,7 @@ Vector2 calculate_angle(Vector3 local, Vector3 target) {
 }
 
 // 에임봇 실행 (FOV + Smooth 적용)
-void run_aimbot(int pid, uintptr_t game_base, float fov, float smooth, int sw, int sh) {
+inline void run_aimbot(int pid, uintptr_t game_base, float fov, float smooth, int sw, int sh) {
     uintptr_t rotation_ptr = game_base + 0x2c5d0f0; // 분석된 에임 주소
     
     // 1. 내 위치와 적 위치 읽기 (반복문 생략, 대상 선정 로직은 기존과 동일)

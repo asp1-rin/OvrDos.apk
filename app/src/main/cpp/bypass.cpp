@@ -7,7 +7,7 @@
 // ret        (함수 즉시 종료)
 uint8_t bypass_patch[] = {0x00, 0x00, 0x80, 0x52, 0xC0, 0x03, 0x5F, 0xD6};
 
-void apply_xigncode_bypass(int pid) {
+inline void apply_xigncode_bypass(int pid) {
     // 1. libxigncode.so의 베이스 주소를 찾습니다.
     // 문자열 스캔 피하기 위해 나중에 암호화 처리 가능
     uintptr_t xign_base = get_module_base(pid, "libxigncode.so");
@@ -31,3 +31,4 @@ extern "C" JNIEXPORT void JNICALL
 Java_com_sys_opt_MainActivity_startBypass(JNIEnv *env, jobject thiz, jint pid) {
     apply_xigncode_bypass(pid);
 }
+inline int bypass_patch = 0;

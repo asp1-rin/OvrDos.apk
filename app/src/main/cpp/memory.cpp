@@ -8,7 +8,7 @@
 #include <sys/syscall.h>
 
 // 프로세스 ID를 찾는 함수
-int get_pid(const char* process_name) {
+inline int get_pid(const char* process_name) {
     int pid = -1;
     DIR* dir = opendir("/proc");
     if (dir == NULL) return -1;
@@ -35,7 +35,7 @@ int get_pid(const char* process_name) {
 }
 
 // 모듈 주소를 찾는 함수
-uintptr_t get_module_base(int pid, const char* module_name) {
+inline uintptr_t get_module_base(int pid, const char* module_name) {
     uintptr_t addr = 0;
     char path[128];
     snprintf(path, sizeof(path), "/proc/%d/maps", pid);
