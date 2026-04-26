@@ -1,6 +1,6 @@
 #include <jni.h>
 #include <stdint.h>
-#include "memory.cpp" // 앞에서 만든 메모리 도구를 가져옵니다.
+ // 앞에서 만든 메모리 도구를 가져옵니다.
 
 // 사인코드 무력화 핵심 패치 코드 (ARM64)
 // mov w0, #0 (결과값 정상 설정)

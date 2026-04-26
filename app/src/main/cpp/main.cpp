@@ -1,6 +1,9 @@
-#include <jni.h>
+#include "memory.cpp"
 #include "bypass.cpp"
 #include "aimbot.cpp"
+#include <jni.h>
+
+
 
 // JNI가 로드될 때 실행되는 기본 설정 (필요 시 작성)
 extern "C" JNIEXPORT jint JNICALL
